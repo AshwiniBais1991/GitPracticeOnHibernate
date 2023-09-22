@@ -16,6 +16,8 @@ public class Employee {
 	private String name;
 	@Column(name = "Employee_City")
 	private String city;
+	@Column(name = "Employee_email-id")
+	private String emailId;
 
 	public Employee(String name, String city, String emailId) {
 
@@ -23,10 +25,6 @@ public class Employee {
 		this.city = city;
 		this.emailId = emailId;
 	}
-
-	@Column(name = "Employee_email-id")
-	private String emailId;
-
 	public int getEmployeeId() {
 		return employeeId;
 	}
