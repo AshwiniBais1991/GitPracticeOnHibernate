@@ -4,21 +4,28 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "EmployeeDetail")
 public class Employee {
-	@Column(name = "Employee_id")
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "Employee_id")
+	
 	private int employeeId;
 	@Column(name = "Employee_Name")
 	private String name;
 	@Column(name = "Employee_City")
 	private String city;
-	@Column(name = "Employee_email-id")
+	@Column(name = "Employee_email_id")
 	private String emailId;
 
+	public Employee() {
+		
+	}
+	
 	public Employee(String name, String city, String emailId) {
 
 		this.name = name;
