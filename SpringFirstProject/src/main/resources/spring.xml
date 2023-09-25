@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="strudent" class="com.spring.first.Strudent" autowire="byType" >
+		<property name="rollNo" value="101"/>
+		<property name="firstName" value="Akshita"/>
+		<property name="lastName" value="Bais"/>
+
+	</bean>
+	
+	<bean id="address" class="com.spring.first.Address">
+	
+		<property name="city" value="Bengaluru"/>
+		<property name="state" value="Karnataka"/>
+		<property name="country" value="India"/>
+	</bean>
+
+</beans>
